@@ -1,0 +1,48 @@
+<!--
+ * @Author: sunpeiyuan
+ * @Date: 2021-05-23 18:57:03
+ * @LastEditors: sunpeiyuan
+ * @LastEditTime: 2021-06-24 00:13:43
+ * @Description:
+-->
+<p>News List!</p>
+
+<a [routerLink]="['/news-content']">新闻详情</a>
+
+<br />
+<br />
+
+<a routerLink="/news-content">跳转新闻详情</a>
+
+<br />
+<br />
+
+<a routerLink="/news/news-detail">跳转新闻详情</a>
+
+<br />
+<br />
+
+<h2>get 方式传值 即 问号 传参的方式。</h2>
+<ul>
+  <li *ngFor="let item of list">
+    <!-- <a routerLink="/news-content">第 {{ item }} 条的详情</a> -->
+
+    <a [routerLink]="['/news-content']" [queryParams]="{ id: item }"
+      >第 {{ item }} 条的详情</a
+    >
+  </li>
+</ul>
+
+<hr />
+
+<h2>动态路由</h2>
+
+<ul>
+  <li *ngFor="let item of list">
+    <a [routerLink]="['/news', item]">第 {{ item }} 条的详情</a>
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
