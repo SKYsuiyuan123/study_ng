@@ -2,7 +2,7 @@
  * @Author: sunpeiyuan
  * @Date: 2021-05-23 18:52:29
  * @LastEditors: sunpeiyuan
- * @LastEditTime: 2021-06-24 00:16:21
+ * @LastEditTime: 2021-06-24 00:33:54
  * @Description: 路由配置模块
  */
 import { NgModule } from '@angular/core';
@@ -63,7 +63,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
